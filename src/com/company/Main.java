@@ -6,8 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        List<String> aryList = new ArrayList<String>(Country.names(20));
-        List<String> linList =  new LinkedList<String>(Country.names(20));
+        List<String> aryList = new ArrayList<>(Country.names(20));
+        List<String> linList =  new LinkedList<>(Country.names(20));
         System.out.printf("ArrayList Printing...");
         System.out.printf(aryList.toString());
         System.out.println();
@@ -26,7 +26,7 @@ public class Main {
         System.out.printf("Map Printing...");
         System.out.printf(conMap.toString());
         System.out.println();
-        Map<String,String> newMap = new HashMap<String,String>();
+        Map<String,String> newMap = new HashMap<>();
         for(String name: conMap.keySet())
         {
             if(name.startsWith("A")){
@@ -37,12 +37,17 @@ public class Main {
         System.out.printf(newMap.toString());
         System.out.println();
 
+
+        List<String> txtList = new LinkedList<>();
+        TextFileGenerator tfg = new TextFileGenerator();
+        while (tfg.hasNext()) {
+            txtList.add(tfg.next());
+        }
         System.out.printf("Text file content Printing...");
-        System.out.printf(sb.toString());
+        System.out.printf(txtList.toString());
         System.out.println();
-    }
-    class CollectionGenerator implements
-    {
 
     }
+
+
 }
