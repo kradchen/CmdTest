@@ -1,7 +1,6 @@
 package com.company;
 
 import java.time.LocalTime;
-import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.StampedLock;
 
 public  class StampedLockTester extends ConCurrentThreadTester {
