@@ -17,37 +17,10 @@ public class Main {
         else System.out.println("B");
 */
 
-        Solution4 s = new Solution4();
-        char[][] board = {
-                "XOOXXXOXXOOOOOOOOOOO".toCharArray(),
-                "XOOXXOOXOOOXOXOXOOXO".toCharArray(),
-                "OOOXXXXOXOXXOOOOXOXO".toCharArray(),
-                "OOOXXOOXOOOXXXOOXOOX".toCharArray(),
-                "OOOOOOOXXXOOOOOOOOOO".toCharArray(),
-                "XOOOOXOXOXXOOOOOOXOX".toCharArray(),
-                "OOOXOOOXOXOXOXOXOXOX".toCharArray(),
-                "OOOXOXOOXXOXOXXOXXXO".toCharArray(),
-                "OOOOXOOXXOOOOXOOOXOX".toCharArray(),
-                "OOXOOXOOOOOXOOXOOOXO".toCharArray(),
-                "XOOXOOOOOOOXOOXOXOXO".toCharArray(),
-                "OXOOOXOXOXXOXXXOXXOO".toCharArray(),
-                "XXOXOOOOXOOOOOOXOOOX".toCharArray(),
-                "OXOOXXXOOOXXXXXOXOOO".toCharArray(),
-                "OOXXXOOOXXOOOXOXOOOO".toCharArray(),
-                "XOOXOXOOOOXOOOXOXOXX".toCharArray(),
-                "XOXOOOOOOXOOOXOXOOOO".toCharArray(),
-                "OXXOOOXXXOXOXOXXXXOO".toCharArray(),
-                "OXOOOOXXOOXOXOOXOOXX".toCharArray(),
-                "OOOOOOXXXXOXOOOXXOOO".toCharArray()};
-        for (char[] ca :
-                board) {
-            System.out.println(ca);
-        }
-        System.out.println();
-        s.setX(board);
-        for (char[] ca :
-                board) {
-            System.out.println(ca);
+        try {
+            ThreadStateTester.threadStateTest();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
     static public  class Solution {
