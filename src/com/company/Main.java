@@ -7,20 +7,29 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
-        /*char[][] board = {"ABCE".toCharArray(), "SFCS".toCharArray(), "ADEE".toCharArray()};
-        Solution s = new Solution();
-        if(s.exist(board,"SEE"))
-        {
-            System.out.println("A");
-        }
-        else System.out.println("B");
-*/
-
-        try {
-            ThreadStateTester.threadStateTest();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+//        try {
+//            ThreadStateTester.threadStateTest();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        switchFunc();
+    }
+    private static void switchFunc()
+    {
+        for (int i = 0; i< 3 ; i++) {
+            switch (i) {
+                case 0:
+                    System.out.println("case 0");
+                    continue;//直接会跳到for循环
+                case 1:
+                    System.out.println("case 1");
+                    break;//跳出switch
+                case 2:
+                    System.out.println("case 2");//没有break直接往下执行
+                case 3://本循环中i到不了3
+                    System.out.println("case 3");
+            }
+            System.out.println("switch is end!");
         }
     }
     static public  class Solution {
