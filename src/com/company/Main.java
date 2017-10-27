@@ -12,7 +12,8 @@ public class Main {
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
-        switchFunc();
+        SocketNIOTester tester = new SocketNIOTester();
+        tester.Test();
     }
     private static void switchFunc()
     {
